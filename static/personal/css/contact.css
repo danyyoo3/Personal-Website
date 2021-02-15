@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    font-family: Times, Times New Roman, serif;
+    font-weight: normal;
+}
+body{
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    color: white;
+}
+
+.main-nav{
+    background-color:black;
+    height: 3em;
+    padding: 1%;
+}
+
+.title{
+    background-color:black;
+}
+
+.title h1{
+    color: white;
+}
+
+.main-nav li {
+    display: inline;  
+    color: white;
+    padding: 2.5em;
+
+}
+
+.subwebsite {
+    display: inline;
+    background: rgba(212, 180, 180, 0.651);
+    margin: 5%;
+}
+
+.most-recent{
+    background: rgba(37, 19, 19, 0.651);
+    float: left;
+    width: 25%;
+    margin: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.introduction{
+    background: rgba(44, 25, 25, 0.651);
+    float: left;
+    width: 65%;
+    margin: 1% 0% 1% 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+a:link {
+    color:blue;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: white;
+}
