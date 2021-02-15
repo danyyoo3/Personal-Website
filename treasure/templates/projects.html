@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Projects</title>
+    <link href="{% static 'personal/css/projects.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="title">
+        <h1>My Projects</h1>
+    </div>
+    <div class="main-nav">
+        <nav>
+            <ul>
+                <div class = "subwebsite">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </div>
+            <div class = "subwebsite">
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'about' %}">About</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="most-recent">
+        <h2>My Projects</h2>
+        <h3>Python</h3>
+        <ul>
+            {% for obj in object_list %}
+            <li><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></li>
+            {% endfor %}
+<!--            <li><a href="{{ obj.get_absolute_url }}">My Dictionary</a></li>
+            <li>Expense Tracker</li>
+            <li>Rock, Paper, Scissors</li>
+            <li>Automated online 2049</li>
+            <li>Tetris</li>
+            <li>Password Generator</li>
+            <li>Alarm Clock</li>
+            <li>Randomizer</li>-->
+        </ul>
+        
+    </div>
+
+    <div class="introduction">
+        <h2>Select a project to see!</h2>
+        <h3>
+        </h3>
+    </div>
+    
+
+</body>
+</html>

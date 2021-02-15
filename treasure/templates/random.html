@@ -1,0 +1,54 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Random Page</title>
+    <link href="{% static 'personal/css/base.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="title">
+        <h1>My Random Website</h1>
+    </div>
+    <div class="main-nav">
+        <nav>
+            <ul>
+                <div class = "subwebsite">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </div>
+            <div class = "subwebsite">
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'about' %}">About</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="most-recent">
+        <h2>Most Recent Project</h2>
+        <h3>{{ object.title }}</h3>
+        <h4>{{ object.description }}</h4>
+        {% if object.preview_image %}
+            <img src="{{object.preview_image.url}}" alt="Preview Image" width = 90% height = 50%/>
+        {% endif %}
+    </div>
+
+    <div class="introduction">
+        <h2>Welcome to my first website!</h2>
+        <h3>A website created to represent an overview of my career.<br>
+            It shows projects that I have elaborated from my humble beginnings as a 
+            newbie programmer.<br>
+            In Contact, you can see where to contact me<br>
+            In About, I shall have the time to tell my story!
+        </h3>
+    </div>
+    
+
+</body>
+</html>

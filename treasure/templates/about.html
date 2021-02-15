@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Projects</title>
+    <link href="{% static 'personal/css/about.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="title">
+        <h1>About</h1>
+    </div>
+    <div class="main-nav">
+        <nav>
+            <ul>
+                <div class = "subwebsite">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </div>
+            <div class = "subwebsite">
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'about' %}">About</a></li>
+            </div>
+                <div class = "subwebsite">
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="most-recent">
+        <h2>Let me tell you a little story...</h2>
+        
+        <h3>To be continued....</h3>
+        
+    </div>
+
+    
+    
+
+</body>
+</html>
